@@ -1,3 +1,142 @@
 body{
     margin: 0 auto;
+
+
+    font-family: Helvetica, sans-serif;
+}
+
+.hidden{
+    display: none;
+}
+
+.mainHeader{
+    height: 60px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 10px 15px 0 20px;
+
+    .logo{
+        cursor: pointer;
+        height: 50px;
+
+        margin: 0px;
+    }
+
+
+    .burger{
+
+        cursor: pointer;
+        .bLine{
+            width: 28px;
+            height: 4px;
+            margin: 4px;
+            border-radius: 20%;
+            background-color: black;
+
+            transition: all .1s ease;
+        }
+        .open{
+            width: 20px;
+
+            margin-top: 6px;
+            margin-bottom: 6px;
+        }
+        .open2{
+            width: 15px;
+        }
+    }
+    .headNav{
+        position: absolute;
+        width: 100%;
+
+        transition: all .2s ease;
+        transform: translateX(300px);
+        opacity: 0;
+        pointer-events: none;
+
+
+        .navList{
+            padding-top: 600px;
+            list-style: none;
+
+            display: flex;
+            flex-direction: column;
+            .navitem{
+                font-size: 40px;
+                text-align: right;
+                margin: 50px 45px 20px 0;
+            }
+            a{
+                text-decoration: none;
+                color: black;
+
+                transition: all .2s ease;
+                &:hover{
+                    border-bottom: solid 5px black;
+                }
+            }
+        }
+    }
+
+    .open{
+        opacity: 1;
+        pointer-events: none;
+        transform: translateX(0px);
+    }
+}
+
+.color{
+    background-color: rgba(0,0,0,.7);
+}
+
+
+.mainFooter{
+    margin: 0 auto;
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+
+    border-top: solid 1px black;
+    padding-top: 30px;
+    .social{
+        display: flex;
+        flex-direction: column;
+        i{
+            cursor: pointer;
+            margin-top: 17px;
+            margin-bottom: 20px;
+
+            font-size: 22px;
+
+            transition: all .2s ease;
+            &:hover{
+                opacity: .7;
+            }
+        }
+    }
+    .footNav{
+        .navList{
+            list-style: none;
+
+            text-align: right;
+
+            .navitem{
+                margin-bottom: 20px;
+                font-weight: bold;
+            }
+
+            a{
+                text-decoration: none;
+                color: black;
+                transition: all .2s ease;
+                &:hover{
+                    border-bottom: solid 3px black;
+                }
+            }
+        }
+    }
 }
