@@ -3,6 +3,7 @@ body{
 
 
     font-family: Helvetica, sans-serif;
+    transition: all .2s ease;
 }
 
 .hidden{
@@ -11,24 +12,33 @@ body{
 
 .mainHeader{
     height: 60px;
+    border-bottom: solid 1px black;
+    position: fixed;
+    width: 100%;
 
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 
-    padding: 10px 15px 0 20px;
+    padding: 15px;
+    padding-top: 0px;
+    margin: 0 auto;
 
     .logo{
+        position: relative;
+        z-index: 100;
         cursor: pointer;
         height: 50px;
 
-        margin: 0px;
+        margin-right: 70%;
     }
 
 
     .burger{
-
+        position: relative;
+        right: 20px;
+        z-index: 99;
         cursor: pointer;
         .bLine{
             width: 28px;
@@ -69,14 +79,18 @@ body{
                 font-size: 40px;
                 text-align: right;
                 margin: 50px 45px 20px 0;
+                cursor: pointer;
             }
             a{
                 text-decoration: none;
-                color: black;
+                color: white;
+                background-color: black;
+                padding: 10px;
+                border-radius: 10%;
 
-                transition: all .2s ease;
+                transition: all .2s ease; 
                 &:hover{
-                    border-bottom: solid 5px black;
+                    background-color: rgba(0,0,0,0.4);
                 }
             }
         }
@@ -84,7 +98,7 @@ body{
 
     .open{
         opacity: 1;
-        pointer-events: none;
+        pointer-events: all;
         transform: translateX(0px);
     }
 }
@@ -138,5 +152,35 @@ body{
                 }
             }
         }
+    }
+}
+
+.homePage{
+    text-align: center;
+    max-width: 1200px;
+
+    margin: 0 auto;
+    h1{
+        padding-top: 140px;
+        margin-bottom: 30px;
+    }
+    .info{
+        width: 90%;
+        margin: 0 auto;
+        padding-bottom: 30px;
+        text-align: left;
+
+        h2{
+            font-size: 24px;
+            margin: 20px;
+            margin-left: 0px;
+        }
+        p{
+            line-height: 20px;
+        }
+    }
+    .i2 , .i3{
+        border-top: solid 1px black;
+        padding-top: 30px;
     }
 }
