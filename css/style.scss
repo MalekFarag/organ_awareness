@@ -1,9 +1,18 @@
 body{
     margin: 0 auto;
 
-
     font-family: Helvetica, sans-serif;
     transition: all .2s ease;
+}
+
+span{
+    position: fixed;
+    z-index: 0;
+    top: 80px;
+    width: 100%;
+    height: 100%;
+    transition: all .2s ease;
+    pointer-events: none;
 }
 
 .hidden{
@@ -79,6 +88,7 @@ body{
                 text-align: right;
                 margin: 50px 45px 20px 0;
                 cursor: pointer;
+                
             }
             a{
                 text-decoration: none;
@@ -160,8 +170,8 @@ body{
 
     margin: 0 auto;
     h1{
-        padding-top: 140px;
-        padding-bottom: 30px;
+        padding-top: 150px;
+        padding-bottom: 10px;
         margin: 0px;
     }
     .info{
@@ -170,17 +180,69 @@ body{
         padding-bottom: 30px;
         text-align: left;
 
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+
         h2{
+            text-align: center;
             font-size: 24px;
             padding: 20px;
             padding-left: 0px;
         }
         p{
+            padding-top: 10px;
             line-height: 20px;
+        }
+        img{
+            width: 80%;
+        }
+
+        i{
+            margin-top: 30px;
+            margin-bottom: 30px;
+            font-size: 80px;
         }
     }
     .i2 , .i3{
         border-top: solid 1px black;
         padding-top: 30px;
+    }
+    .i3{
+        text-align: center;
+    }
+}
+
+
+@media screen and (min-width: 800px){
+    .homePage{
+        .info{
+            flex-direction: row;
+            img{
+                width: 30%;
+            }
+
+            h2{
+                text-align: left;
+                font-size: 34px;
+            }
+            p{
+                font-size: 18px;
+                line-height: 24px;
+                margin-right: 20px;
+            }
+
+            i{
+                font-size: 100px;
+            }
+        }
+        .i3{
+            flex-direction: column;
+
+            h2{
+                text-align: center;
+            }
+        }
     }
 }
