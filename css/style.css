@@ -58,8 +58,8 @@ body {
 
 .mainHeader .burger .open {
   width: 20px;
-  margin-top: 6px;
-  margin-bottom: 6px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .mainHeader .burger .open2 {
@@ -186,6 +186,7 @@ body {
 .homePage h1 {
   padding-top: 140px;
   padding-bottom: 30px;
+  margin: 0px;
 }
 
 .homePage .info {
